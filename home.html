@@ -12,6 +12,67 @@
 
      <!-- fontawsome -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+
+     <!-- swiper css -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<style>
+.Home-main{
+    position: relative;
+    min-height: calc(100vh - 250px);
+    overflow-x: hidden;
+    display: block;
+  padding: 0 calc(3.5vw + 5px);
+  top: 72px;
+}
+
+.Home-main::after{
+background: url("./assets/images/home-background.png") center center / cover no-repeat fixed;
+content: "";
+position: absolute;
+inset: 0px;
+opacity: 1;
+z-index: -1;
+}
+
+
+.CarouselContainer{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.carousel__item{
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.carousel__item a{
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,rgba(0, 0, 0, 0.23);
+    cursor: pointer;
+    display: block;
+    position: relative;
+    padding: 4px;
+   
+}
+
+.carousel__item img{
+    width: 100%;
+    padding: 4px;
+}
+
+.carousel__item a:hover{
+    padding: 0;
+    border: 4px solid rgba(249, 249, 249, 0.8);
+    transition-duration: 200ms;
+}
+.swiper-pagination-bullet-active {
+    background: #ffffff;
+}
+</style>
+
     <title>home</title>
 </head>
 
@@ -71,7 +132,7 @@
         </div>
 
 
-        <div class="openMenu" > <i class="fa fa-bars"></i>
+        <div class="openMenu"  > <i class="fa fa-bars"></i>
 
             <div class="dropdown">
 
@@ -101,10 +162,150 @@
         </div>
     </nav>
 
-
-
-
     <!-- nav bar end here -->
+
+
+     <!-- MOvie slider start -->
+
+    <div class="Home-main">
+
+          <div class="CarouselContainer" >
+
+          
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="carousel__item">
+                    <a href="#"  >
+                        <img src="./assets/images/sliderImg1.jpg" alt="">
+                    </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="carousel__item">
+                    <a href="#"  >
+                        <img src="./assets/images/sliderImg2.jpg" alt="">
+                    </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="carousel__item">
+                    <a href="#"  >
+                        <img src="./assets/images/sliderImg3.jpg" alt="">
+                    </a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="carousel__item">
+                    <a href="#"  >
+                        <img src="./assets/images/sliderImg4.jpg" alt="">
+                    </a>
+                </div>
+              </div>
+          
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+
+          <div class="swiper-pagination" style="position:absolute;bottom: 0;margin-top: 20px;"></div>
+        </div>
+
+
+<!-- viwer slide start here -->
+
+        <div class="viewer-container">
+
+            <div class="wrap">
+                <img src="./assets/images/viewers-disney.png" alt="">
+                <video autoplay="true" loop="true" playsInline="true">
+                    <source src="./assets/videos/1564674844-disney.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="wrap">
+                <img src="./assets/images/viewers-pixar.png" alt="">
+                <video autoplay="true" loop="true" playsInline="true">
+                    <source src="./assets/videos/1564676714-pixar.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="wrap">
+                <img src="./assets/images/viewers-marvel.png" alt="">
+                <video autoplay="true" loop="true" playsInline="true">
+                    <source src="./assets/videos/1564676115-marvel.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="wrap">
+                <img src="./assets/images/viewers-starwars.png" alt="">
+                <video autoplay="true" loop="true" playsInline="true">
+                    <source src="./assets/videos/1608229455-star-wars.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="wrap">
+                <img src="./assets/images/viewers-national.png" alt="">
+                <video autoplay="true" loop="true" playsInline="true">
+                    <source src="./assets/videos/1564676296-national-geographic.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+        
+        <!-- viwer slide end here -->
+        
+<!-- recommended for you -->
+
+<div class="recommended-container">
+      
+    <h4>Recommended Movies</h4>
+
+<div class="content">
+
+    <div class="wrap">
+
+ <img src="./assets/images/sliderImg3.jpg" alt=""> 
+
+    </div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- recommended for you -->
+
+          <!-- MOvie slider end -->
+
+    </div>
+
+   <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+   <!-- Initialize Swiper -->
+   <script>
+     var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+       pagination: {
+         el: ".swiper-pagination",
+       },
+       slidesPerView: 1,
+    //   spaceBetween: 30,
+      loop: true,
+     });
+   </script>
+
+
+   
 
 </body>
 
