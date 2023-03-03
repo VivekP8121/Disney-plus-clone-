@@ -10,68 +10,70 @@
 
     <link rel="stylesheet" href="./stlye/style.css">
 
-     <!-- fontawsome -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+        integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 
-     <!-- swiper css -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-<style>
-.Home-main{
-    position: relative;
-    min-height: calc(100vh - 250px);
-    overflow-x: hidden;
-    display: block;
-  padding: 0 calc(3.5vw + 5px);
-  top: 72px;
-}
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        .Home-main {
+            position: relative;
+            min-height: calc(100vh - 250px);
+            overflow-x: hidden;
+            display: block;
+            padding: 0 calc(3.5vw + 5px);
+            top: 72px;
+        }
 
-.Home-main::after{
-background: url("./assets/images/home-background.png") center center / cover no-repeat fixed;
-content: "";
-position: absolute;
-inset: 0px;
-opacity: 1;
-z-index: -1;
-}
+        .Home-main::after {
+            background: url("./assets/images/home-background.png") center center / cover no-repeat fixed;
+            content: "";
+            position: absolute;
+            inset: 0px;
+            opacity: 1;
+            z-index: -1;
+        }
 
 
-.CarouselContainer{
-    margin-top: 20px;
-    padding-bottom: 20px;
-    position: relative;
-}
+        .CarouselContainer {
+            margin-top: 20px;
+            padding-bottom: 20px;
+            position: relative;
+        }
 
-.carousel__item{
-    width: 100%;
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-}
+        .carousel__item {
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            position: relative;
+        }
 
-.carousel__item a{
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,rgba(0, 0, 0, 0.23);
-    cursor: pointer;
-    display: block;
-    position: relative;
-    padding: 4px;
-   
-}
+        .carousel__item a {
+            border-radius: 4px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23);
+            cursor: pointer;
+            display: block;
+            position: relative;
+            padding: 4px;
 
-.carousel__item img{
-    width: 100%;
-    padding: 4px;
-}
+        }
 
-.carousel__item a:hover{
-    padding: 0;
-    border: 4px solid rgba(249, 249, 249, 0.8);
-    transition-duration: 200ms;
-}
-.swiper-pagination-bullet-active {
-    background: #ffffff;
-}
-</style>
+        .carousel__item img {
+            width: 100%;
+            padding: 4px;
+        }
+
+        .carousel__item a:hover {
+            padding: 0;
+            border: 4px solid rgba(249, 249, 249, 0.8);
+            transition-duration: 200ms;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #ffffff;
+        }
+    </style>
 
     <title>home</title>
 </head>
@@ -121,7 +123,8 @@ z-index: -1;
 
             <div class="sign-out">
 
-                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.dovercourt.org%2Fwp-content%2Fuploads%2F2019%2F11%2F610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg&f=1&nofb=1&ipt=953c451a168a62d16426b066df848370c119ca93bd26d9f5854ab0ffd3c0f004&ipo=images" class="UserImg" alt="user Image">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.dovercourt.org%2Fwp-content%2Fuploads%2F2019%2F11%2F610-6104451_image-placeholder-png-user-profile-placeholder-image-png.jpg&f=1&nofb=1&ipt=953c451a168a62d16426b066df848370c119ca93bd26d9f5854ab0ffd3c0f004&ipo=images"
+                    class="UserImg" alt="user Image">
 
                 <div class="dropdown">
                     <span>Log Out</span>
@@ -132,7 +135,7 @@ z-index: -1;
         </div>
 
 
-        <div class="openMenu"  > <i class="fa fa-bars"></i>
+        <div class="openMenu"> <i class="fa fa-bars"></i>
 
             <div class="dropdown">
 
@@ -165,53 +168,53 @@ z-index: -1;
     <!-- nav bar end here -->
 
 
-     <!-- MOvie slider start -->
+    <!-- MOvie slider start -->
 
     <div class="Home-main">
 
-          <div class="CarouselContainer" >
+        <div class="CarouselContainer">
 
-          
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="carousel__item">
-                    <a href="#"  >
-                        <img src="./assets/images/sliderImg1.jpg" alt="">
-                    </a>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="carousel__item">
+                            <a href="#">
+                                <img src="./assets/images/sliderImg1.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="carousel__item">
+                            <a href="#">
+                                <img src="./assets/images/sliderImg2.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="carousel__item">
+                            <a href="#">
+                                <img src="./assets/images/sliderImg3.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="carousel__item">
+                            <a href="#">
+                                <img src="./assets/images/sliderImg4.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="carousel__item">
-                    <a href="#"  >
-                        <img src="./assets/images/sliderImg2.jpg" alt="">
-                    </a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="carousel__item">
-                    <a href="#"  >
-                        <img src="./assets/images/sliderImg3.jpg" alt="">
-                    </a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="carousel__item">
-                    <a href="#"  >
-                        <img src="./assets/images/sliderImg4.jpg" alt="">
-                    </a>
-                </div>
-              </div>
-          
+                <!-- <div class="swiper-pagination"></div> -->
             </div>
-            <!-- <div class="swiper-pagination"></div> -->
-          </div>
 
-          <div class="swiper-pagination" style="position:absolute;bottom: 0;margin-top: 20px;"></div>
+            <div class="swiper-pagination" style="position:absolute;bottom: 0;margin-top: 20px;"></div>
         </div>
 
 
-<!-- viwer slide start here -->
+        <!-- viwer slide start here -->
 
         <div class="viewer-container">
 
@@ -251,61 +254,84 @@ z-index: -1;
             </div>
 
         </div>
-        
+
         <!-- viwer slide end here -->
-        
-<!-- recommended for you -->
 
-<div class="recommended-container">
-      
-    <h4>Recommended Movies</h4>
+        <!-- recommended for you -->
 
-<div class="content">
+        <div class="recommended-container movieDivContainer">
 
-    <div class="wrap">
+            <h4>Recommended Movies</h4>
 
- <img src="./assets/images/sliderImg3.jpg" alt=""> 
+            <div class="content">
+
+            </div>
+
+
+        </div>
+
+
+        <div class="trending-container movieDivContainer">
+
+            <h4>Trending </h4>
+
+            <div class="content">
+
+            </div>
+        </div>
+
+        <div class="original-container movieDivContainer">
+
+            <h4>Original</h4>
+
+            <div class="content">
+
+            </div>
+        </div>
+
+        <div class="newtodisney-container movieDivContainer">
+
+            <h4>New to Disney+</h4>
+
+            <div class="content">
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- recommended for you -->
+
+        <!-- MOvie slider end -->
 
     </div>
 
-</div>
+    <script type="module" src="./index.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            slidesPerView: 1,
+            //   spaceBetween: 30,
+            loop: true,
+        });
+    </script>
 
 
 
-</div>
-
-
-
-
-
-
-<!-- recommended for you -->
-
-          <!-- MOvie slider end -->
-
-    </div>
-
-   <!-- Swiper JS -->
-   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-   <!-- Initialize Swiper -->
-   <script>
-     var swiper = new Swiper(".mySwiper", {
-        autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-       pagination: {
-         el: ".swiper-pagination",
-       },
-       slidesPerView: 1,
-    //   spaceBetween: 30,
-      loop: true,
-     });
-   </script>
-
-
-   
 
 </body>
 
