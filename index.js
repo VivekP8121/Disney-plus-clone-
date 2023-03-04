@@ -1,7 +1,7 @@
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
   // import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
-  import { getFirestore ,collection,getDocs} from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js'
+  import { getFirestore ,collection,getDocs, query, where} from 'https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js'
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,7 +25,13 @@
   const db = getFirestore(app);
 
 
-// Get Movies from DB
+
+  // If we are on Home Page then create movie divs
+
+  
+
+  if(window.location.pathname == '/home.html'){
+      // Get Movies from DB
 let recommendMovies = []
 let trendingMovies = []
 let newMovies = []
@@ -64,14 +70,6 @@ if(newMovies.length){
 if(originalMovies.length){
   createOriginalMovies()
 }
-
-
-
-
-
-
-
-
 
 // Functions to create recommendMovies
 
@@ -135,3 +133,90 @@ function createOriginalMovies(){
 
 originalParent.innerHTML = output
 }
+
+
+
+// Click function to navigate to movies deatail page
+
+
+let recommendMoviesList = document.querySelectorAll('.recommended-container .content .wrap')
+let originalMoviesList = document.querySelectorAll('.trending-container .content .wrap')
+let trendingMoviesList = document.querySelectorAll('.original-container .content .wrap')
+let newMoviesList = document.querySelectorAll('.newtodisney-container .content .wrap')
+
+
+recommendMoviesList.forEach((child)=>{
+  child.onclick = ()=>{
+
+    RouteToDetailPage(child)
+
+  }
+})
+originalMoviesList.forEach((child)=>{
+  child.onclick = ()=>{
+
+    RouteToDetailPage(child)
+
+  }
+})
+trendingMoviesList.forEach((child)=>{
+  child.onclick = ()=>{
+
+    RouteToDetailPage(child)
+
+  }
+})
+newMoviesList.forEach((child)=>{
+  child.onclick = ()=>{
+
+    RouteToDetailPage(child)
+
+  }
+})
+
+function RouteToDetailPage(child){
+
+  let movieName = child.getAttribute('data-id');
+
+  let newRoute = `${window.origin}/detail.html?movie=${movieName}`
+
+  console.log("New Route",newRoute)
+
+  window.location = newRoute
+}
+  }
+
+
+  // if we are on Detail Page 
+  if(window.location.pathname == '/detail.html'){
+
+    window.onload = setMovieData ;
+
+async function  setMovieData(){
+
+  let bgElement = document.querySelector(".Detail .background img")
+  let imgTitleElement = document.querySelector(".Detail .imgTitle img")
+  let subTitleElement = document.querySelector(".Detail .subtitle")
+  let descriptionElement = document.querySelector(".Detail .description")
+
+  // get Movie Name from url  and remove '?movie='
+let movieName = window.location.search.slice(7).replace("%20"," ")
+
+// Get Movie From firestore
+const q = query(collection(db, "movies"), where("title", "==", movieName));
+
+const movieData = await getDocs(q);
+
+movieData.forEach((doc) => {
+  let data = doc.data()
+
+  // Set Movie Data to Html Elements
+  bgElement.src = data.backgroundImg
+  imgTitleElement.src = data.titleImg
+  subTitleElement.innerHTML = data.subTitle
+  descriptionElement.innerHTML = data.description
+});
+
+    
+}
+  }
