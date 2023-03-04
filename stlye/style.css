@@ -220,7 +220,7 @@ nav img {
     z-index: auto;
 }
 
-.nav-menu span {
+.nav-menu span{
     color: rgb(249, 249, 249);
     font-size: 13px;
     letter-spacing: 1.42px;
@@ -251,7 +251,7 @@ nav img {
     cursor: pointer;
 }
 
-.nav-menu a:hover span:before {
+.nav-menu a:hover span:before{
     transform: scaleX(1);
     visibility: visible;
     opacity: 1 !important;
@@ -295,7 +295,7 @@ nav img {
     opacity: 0;
 }
 
-.sign-out .dropdown span {
+.sign-out .dropdown span{
     cursor: pointer;
 }
 
@@ -304,14 +304,16 @@ nav img {
     display: flex;
     position: relative;
     justify-content: end;
+
 }
 
 .openMenu:hover {
     cursor: pointer;
+    
 }
 
 
-.openMenu .dropdown {
+ .dropdown {
     position: absolute;
     top: 48px;
     right: 5px;
@@ -327,6 +329,8 @@ nav img {
     display: none;
     display: flex;
     flex-direction: column;
+    
+
 }
 
 .openMenu:hover .dropdown {
@@ -335,12 +339,14 @@ nav img {
     transition-duration: 1s;
 }
 
-.logout-span {
+.logout-span{
     text-transform: uppercase;
+   display: block;
+      
 }
 
-.openMenu a {
-    margin-bottom: 20px;
+.openMenu .dropdown a{
+    margin-bottom: 25px;
 }
 
 .openMenu span {
