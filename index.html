@@ -12,7 +12,8 @@
     <title>Disney Plus</title>
 
     <!-- fontawsome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+        integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -24,7 +25,7 @@
         <a href="#" class="logo"><img src="./assets/images/logo.svg" alt=""></a>
 
         <div class="container">
-            <div class="login-btn">Login</div>
+            <div class="login-btn routeToHome">Login</div>
         </div>
 
     </nav>
@@ -40,7 +41,7 @@
 
             <div class="cta">
                 <img src="./assets/images/cta-logo-one.svg" class="cta-logo-one" alt="">
-                <a href="#" class="sign-up">GET ALL THERE</a>
+                <a href="home.html" class="sign-up">GET ALL THERE</a>
                 <p class=" description">Get Premier Access to Raya and the last dragon for an additional fee with a
                     disney+ subscription. As of 03/26/2023, the price of disney+ and The Disney Bundel will increase by
                     $1</p>
@@ -57,6 +58,21 @@
 
 
     <!-- login page main content end  here  -->
+
+    <script>
+
+
+        let loginbtn = document.querySelector('.container .routeToHome')
+
+
+        if (loginbtn) {
+            loginbtn.addEventListener('click', () => {
+                let newUrl = window.location.origin + '/home.html'
+            window.location.href = newUrl
+            })
+        }
+
+    </script>
 </body>
 
 </html>

@@ -28,7 +28,7 @@
 
   // If we are on Home Page then create movie divs
 
-  
+
 
   if(window.location.pathname == '/home.html'){
       // Get Movies from DB
